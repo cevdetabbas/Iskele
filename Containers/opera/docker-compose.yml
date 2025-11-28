@@ -1,0 +1,17 @@
+---
+services:
+  opera:
+    image: lscr.io/linuxserver/opera:latest
+    container_name: opera
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - OPERA_CLI=https://www.linuxserver.io/ #optional
+    volumes:
+      - ./config:/config
+    ports:
+      - 3470:3000
+      - 3471:3001
+    shm_size: "1gb"
+    restart: unless-stopped
