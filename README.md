@@ -4,7 +4,7 @@ Iskele is my personal infrastructure and cybersecurity playground. It hosts my w
 
 
 ISKELE PRIIMARY LOG
-normal installation → install → reboot
+reccomended installation → install → reboot
 enable Ubuntu Pro
 
 SSH
