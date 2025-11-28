@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  android-container:
+    image: budtmo/docker-android-x86-11.0-google
+    container_name: androdocker
+    ports:
+      - "6080:6080"
+    environment:
+      - EMULATOR_DEVICE=Samsung Galaxy S10
+      - WEB_VNC=true
+    devices:
+      - "/dev/kvm:/dev/kvm"
+    volumes:
+      - "./data:/home/anroidusr"
+    restart: unless-stopped

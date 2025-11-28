@@ -1,0 +1,17 @@
+---
+services:
+  webtop:
+    image: lscr.io/linuxserver/webtop:debian-kde
+    container_name: kde
+    hostname : kde
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - ./data:/config
+    ports:
+      - 3900:3000
+      - 3901:3001
+    shm_size: "4gb"
+    restart: unless-stopped
